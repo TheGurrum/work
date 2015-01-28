@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Demonstration of image viewer</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<script src="scripts/jquery-1.11.2.min.js"></script>
+	<script src="scripts/jquery.bxslider.min.js"></script>
+</head>
+<body>
+<div class="site">
+<div class="bxslider-wrap">
+<ul class="bxslider">
+<li>
+<ul class="bxslider-slide">
+<li class="bigview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background2.jpg" alt=""/></li>
+<li class="preview"><img src="images/background3.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background4.jpeg" alt=""/></li>
+</ul>
+</li>
+<li>
+<ul class="bxslider-slide">
+<li class="bigview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background2.jpg" alt=""/></li>
+<li class="preview"><img src="images/background3.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background4.jpeg" alt=""/></li>
+</ul>
+</li>
+<li>
+<ul class="bxslider-slide">
+<li class="bigview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background2.jpg" alt=""/></li>
+<li class="preview"><img src="images/background3.jpeg" alt=""/></li>
+<li class="preview"><img src="images/background4.jpeg" alt=""/></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="full-screen">
+</div>
+<script>
+$(document).ready(function(){
+$(".preview").bind("click",onPreviewClick);
+function onPreviewClick(event) {
+	$(".bigview").fadeTo(30,0.33,function(){
+		$(".bigview img").replaceWith($(event.currentTarget).html());
+		$(this).fadeTo(200,1);
+	});
+	$(".preview").add(".bigview").css("background-color","#fff");
+	$(event.currentTarget).css("background-color","#a6a6a6");
+    return true;
+	}
+var slider1 = $('.bxslider').bxSlider({
+	mode: 'horizontal',
+	auto: true,
+	autoHover: true,
+	speed: 500,
+	pause: 6000,
+	pager: false
+});
+function animationPic() {
+	$(".bigview").fadeTo(150,1);
+	return true;
+}
+animationPic();
+$(".bigview").bind("click",toggleFullScreen);
+function toggleFullScreen(event) {
+	var width = document.documentElement.clientWidth;
+	var height = document.documentElement.clientHeight;
+	
+	$(".full-screen").replaceWith('<div class="full-screen">'+$(event.currentTarget).html()+'</div>');
+	$(".full-screen").css({'width' : width,'height' : height,'position' : 'fixed','top' : '0','left' : '0','right' : width,'bottom' : height,'display':'block'}).fadeTo(300,1);
+	$(".full-screen img").css({'max-width' : '80%','display' : 'block','margin' : '2% auto'});
+	$(".full-screen").bind("click",function(){
+		$(this).fadeTo(300,0,function(){
+			$(this).css({'display' : 'none'});
+		});
+	});
+	return true;
+}
+  });
+ </script>
+</body>
+</html>
