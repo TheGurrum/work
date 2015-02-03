@@ -1,0 +1,531 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+body{
+	background: url("../images/main_bg.png");
+	font-family: "PT Sans",Helvetica,sans-serif;
+	font-size: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+#container {
+	width: 100%;
+}
+
+header {
+	background: url("../images/house.png") no-repeat;
+	height: 540px;
+	width: 960px;
+	margin: 0 auto;
+	overflow: hidden;
+	color: #ffffff;
+}
+
+#logo {
+	float: left;
+	width: 131px;
+	height: 71px;
+	margin-top: 15px;
+	margin-left: 30px;
+}
+
+#header_t {
+	float: left;
+	width: 380px;
+	margin: 15px 0 0 90px;
+	text-align: center;
+	font: 14px "MS Sans Serif", Verdana;
+	letter-spacing: 2px;
+}
+
+#header_phone {
+	background: url("../images/phone.png") no-repeat;
+	float: right;
+	width: 162px;
+	margin-top: 18px;
+	margin-right: 30px;
+	padding-left: 50px;
+	font-family: Helvetica, Verdana, sans-serif;
+}
+
+.knopka {
+	background: url("../images/raschet.png") no-repeat;
+	float: right;
+	margin-right: 160px;
+	margin-top: 30px;
+	width: 158px;
+	height: 43px;
+	border: none;
+}
+
+.knopka:hover {
+	cursor: pointer;
+}
+
+#znachok {
+	width: 111px;
+	height: 83px;
+	margin-left: 67px;
+	margin-top: 250px;
+}
+
+#menu_wrap {
+	height: 58px;
+}
+
+#menu {
+	background: url("../images/menu_bg.png") repeat-x;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+	width: 100%;
+	margin: -1px auto 0;
+	z-index: 100;
+}
+
+#menu ul {
+	margin: 0 auto;
+	height: 58px;
+	width: 960px;
+	overflow: hidden;
+	list-style: none;
+}
+
+#menu ul li {
+	float: left;
+}
+
+#menu ul li a {
+	font: bold 18px "Times New Roman";
+	color: #fefefe;
+	display: block;
+	padding: 18px 38px;
+	text-shadow: 0 -1px 0 #000000;
+}
+
+#menu ul li a:hover {
+	color: #fa0000;
+}
+
+#pochemu {
+	background: url("../images/block_bg.png") repeat-x;
+	height: 530px;
+	margin: 3px auto 0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#p_block {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+#p_block h1 {
+	background-color: #f2f2f2;
+	font: 30px "PT Serif Caption";
+	color: #1f0a04;
+	display: block;
+	width: 652px;
+	margin: 25px auto;
+	border-radius: 20px;
+}
+
+.strelki {
+	background: url("../images/strelki.png") no-repeat;
+	float: left;
+	margin-top: 22px;
+	margin-left: 35px;
+	width: 24px;
+	height: 357px;
+}
+
+.punktiy {
+	background-color: #f2f2f2;
+	border: 2px solid #683e28;
+	border-radius: 20px;
+	box-sizing: border-box;
+	float: left;
+	margin-left: 21px;
+	margin-top: 10px;
+	padding: 0 12px;
+	text-align: left;
+	width: 380px;
+	height: 410px;
+}
+
+.punktiy p {
+	padding-top: 8px;
+	padding-bottom: 49px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.punktiy p span{
+	color: red;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.punktiy .notp {
+	padding-top: 7px;
+	padding-bottom: 10px;
+}
+
+.punktiy:hover {
+	cursor: pointer;
+}
+
+#about_company {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 55px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+#about_company h1, #akcii h1, #projects-wrap h1 {
+	text-align: center;
+	font: bold 35px "PT Serif Caption";
+	color: #683e28;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+#about, #photogallery {
+	background-color: #ffffff;
+	text-align: left;
+	overflow: hidden;
+	padding: 20px 20px 0;
+}
+
+#about p {
+	font: 18px/1.5 "PT Sans", sans-serif;
+	margin: 15px auto;
+	text-indent: 20px;
+}
+
+#technology {
+	background: url("../images/block_bg.png") repeat-x;
+	height: 555px;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 65px;
+}
+
+#technology_about {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	overflow: hidden;
+}
+
+#technology_about h1 {
+	background-color: #ffffff;
+	font: 30px "PT Serif Caption";
+	color: #1f0a04;
+	display: block;
+	width: 510px;
+	letter-spacing: 1px;
+	margin: 0 auto 25px;
+	border-radius: 20px;
+}
+
+#technology_about .techno_block {
+	border: 2px solid #683e28;
+	border-radius: 7px;
+	width: 296px;
+	height: 200px;
+	float: left;
+	margin: 20px 10px;
+}
+
+#t_image1 {
+	background: url("../images/t_fundament.png") no-repeat;
+}
+
+#t_image2 {
+	background: url("../images/t_karkas.png") no-repeat;
+}
+
+#t_image3 {
+	background: url("../images/t_teplo.png") no-repeat;
+}
+
+#t_image4 {
+	background: url("../images/t_komunication.png") no-repeat;
+}
+
+#t_image5 {
+	background: url("../images/t_kriysha.png") no-repeat;
+}
+
+#t_image6 {
+	background: url("../images/t_fasad.png") no-repeat;
+}
+
+#technology_about .techno_block .text h3 {
+	color: #ffffff;
+	text-align: left;
+	font: 16px "PT Sans Caption";
+	margin-bottom: 3px;
+}
+
+#technology_about .techno_block .text {	
+	background-color: rgba(104, 62, 40, 0.9);
+    border-radius: 7px;
+    display: block;
+    height: 0;
+	margin-left: -1px;
+    margin-top: -1px;
+    overflow: hidden;
+    padding: 5px;
+    transition: all 0.25s ease-in-out 0s;
+	visibility: hidden;
+    width: 288px;
+}
+
+#technology_about .techno_block:hover .text {
+	visibility: visible;
+	height: 97%;
+}
+
+#technology_about .techno_block .text p {
+	color: rgba(255, 255, 255, 0.8);
+	font: 16px "PT Sans";
+	text-align: left;
+}
+
+#akcii {
+	width: 960px;
+	margin: 0 auto;
+	padding-top: 55px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+#about_akcii {
+	background-color: #ffffff;
+	overflow: hidden;
+	padding: 20px 20px 0;
+	height: 570px;
+	border-radius: 10px;
+}
+
+#about_akcii .a_akcii {
+	float: left;
+	width: 285px;
+	margin: 25px 10px 10px;
+	text-align: center;
+	overflow: hidden;
+}
+
+#about_akcii .a_akcii span {
+	display: block;
+	margin-top: 5px;
+}
+
+#about_akcii .a_akcii span a, #about_akcii .a_akcii span a:visited {
+	font-size: 18px;
+	color: #333;
+	text-decoration: underline;
+}
+
+#about_akcii .a_akcii span a:active, #about_akcii .a_akcii span a:hover {
+	color: #e10000;
+}
+
+#about_akcii .a_akcii img {
+	border-radius: 20px;
+}
+
+#about_akcii .a_akcii h4 {
+	font-size: 20px;
+	color: #333;
+	text-decoration: line-through;
+	padding-top: 20px;
+}
+
+#about_akcii .a_akcii h3 {
+	font-size: 24px;
+	color: #e10000;
+	padding-top: 2px;
+	padding-bottom: 13px;
+}
+
+#about_akcii .a_akcii p {
+	color: #333;
+	font-size: 16px;
+	text-align: left;
+}
+
+.divider {
+	background: url("../images/divider.png") no-repeat;
+	float: left;
+	width: 1px;
+	height: 542px;
+}
+/*Изменения в CSS ниже - Тимур*/
+#photogallery {
+	width: 940px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+#photogallery li img {
+	border-radius: 10px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+#photogallery-wrap {
+	background: url("../images/block_bg.png") repeat-y;
+	background-size: cover;
+	height: 820px;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 65px;
+}
+#photogallery-wrap h1 {
+	background-color: #ffffff;
+	font: 30px "PT Serif Caption";
+	color: #1f0a04;
+	display: block;
+	width: 510px;
+	text-align: center;
+	letter-spacing: 1px;
+	margin: 0 auto 10px;
+	border-radius: 20px;
+}
+/*стандартные стрелочки слайдера в фотогалерее*/
+.bx-prev {
+	display: block;
+	width: 30px;
+	height: 34px;
+	background: #fff url(../images/bx-prev.png) no-repeat center center;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top:-17px;
+	text-indent: -9999px;
+	border-radius: 0 3px 3px 0;
+	z-index: 120;
+} 
+.bx-next {
+	display: block;
+	width: 30px;
+	height: 34px;
+	background: #fff url(../images/bx-next.png) no-repeat center center;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	margin-top:-17px;
+	text-indent: -9999px;
+	border-radius: 3px 0 0 3px;
+	z-index: 120;
+}
+/*блок Проекты*/
+#projects-wrap {
+	height: 860px;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 65px;
+	position: relative;
+}
+
+.projects {
+	width: 920px;
+	height: 720px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: hidden;
+	border-radius: 10px;
+	position: relative;
+}
+.projects .bigview {
+	border-radius: 10px;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	display: block;
+	overflow: hidden;
+}
+.projects .bigview  img {
+	min-width: 720px;
+	max-width: 920px;
+	min-height:600px;
+	max-height: 600px;
+	border-radius: 10px;
+}
+.projects .bxslider1 {
+	display: block;
+	width: 920px;
+	height: 100px;
+	text-align: center;
+	margin: 0 auto;
+
+}
+.projects .preview {
+    border: solid #ccc 1px;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+	max-width: 120px;
+	max-height: 80px;
+}
+  
+.projects .preview img {
+	display: block;
+	width: 120px;
+	height: 80px;
+}
+/*Слайдер подключенный к разделу Проекты*/
+#bxslider-main {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+#bxslider-main .prev {
+	display: block;
+	width: 60px;
+	height: 72px;
+	background: url(../images/strelki-left.png) no-repeat 100% 100%;
+	position: absolute;
+	left: 0px;
+	top: 50%;
+	margin-top:-34px;
+	text-indent: -9999px;
+	border-radius: 0 3px 3px 0;
+	z-index: 120;
+}
+#bxslider-main .next {
+	display: block;
+	width: 60px;
+	height: 72px;
+	background: url(../images/strelki-right.png) no-repeat 0% 100%;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	margin-top:-34px;
+	text-indent: -9999px;
+	border-radius: 3px 0 0 3px;
+	z-index: 120;
+}
+  
