@@ -13,6 +13,21 @@
 </head>
 <body>
 	<div id="container">
+		<div id="form-raschet">
+		<form name="rash_form" action="#" method="post" onsubmit="onRashSubmit()">
+		<p>
+		<label>Введите данные для расчета стоимости:</label><br /><br />
+		<label>Введите требуемую жилую площадь (в м.кв.):</label><br />
+		<input id="square" type="text" name="square" size="40" maxlength="20" value="" pattern="[0-9]{1,20}" placeholder="Жилая площадь дома" required/><br />
+		<label>Введите количество этажей:</label><br />
+		<input id="floor" type="text" name="floor" size="40" maxlength="20" value="" pattern="[0-9]{1,20}" placeholder="Кол-во этажей" required/><br />
+		<label id="mansarda">Наличие мансарды:</label>
+		<input id="mans" type="checkbox" name="mansarda" /><br /><br />
+		<input type="button" name="back" onclick="onBackClick()" value="Назад" />
+		<input type="submit" name="send" value="Рассчитать" />
+		</p>
+		</form>
+		</div>
 		<header>
 			<div id="logo">
 				<a href="index.html"><img src="images/logo.png" alt="Логотип" /></a>
@@ -24,7 +39,7 @@
 				<h3>+7 (918) 666-59-33<br>+7 (918) 443-99-20</h3>
 			</div>
 			<div class="clear"></div>
-			<input class="knopka" type="button" name="raschet" value="" />
+			<input class="knopka" type="button" name="raschet" value="" onclick="onRashClick()" />
 			<div class="clear"></div>
 			<div id="znachok">
 				<img src="images/znachok.png" alt="10 лет опыт строительства" />
@@ -35,7 +50,7 @@
 				<nav>
 					<ul>
 						<li><a href="#about_company">О КОМПАНИИ</a></li>
-						<li><a href="#">АКЦИИ</a></li>
+						<li><a href="#akcii">АКЦИИ</a></li>
 						<li><a href="#projects-wrap">ПРОЕКТЫ</a></li>
 						<li><a href="#technology">ТЕХНОЛОГИЯ</a></li>
 						<li><a href="#photogallery-wrap">ФОТОГАЛЕРЕЯ</a></li>
@@ -152,6 +167,240 @@
 				</div>
 			</div>
 		</div>
+		<div id="projects-wrap">
+			<h1>Проекты</h1>
+			<div id="bxslider-main">
+				<div class="prev">
+				</div>
+			<ul class="bxslider-main">
+				<li>
+					<div class="projects">
+						<div class="projects-description">
+						<p>Проект № 1</p>
+						<p>Общая площадь: 50 кв. м.</p>
+						<p>Габариты: 8.09 м. x 6.5 м.</p>
+						<p>Кол-во этажей: 1</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+						</div>
+						<div class="bigview"><img src="images/gallery/35_ukrop_fas1_1600.jpg" alt="photo"></div>
+						<div class="bxslider1">
+							<span class="preview"><img src="images/gallery/35_ukrop_fas1_1600.jpg" alt="photo"></span>
+							<span class="preview"><img src="images/gallery/35_ukrop_plan1_1000(1).jpg" alt="photo"></span>
+						</div>
+					</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 2</p>
+						<p>Общая площадь: 88 кв. м.</p>
+						<p>Габариты: 10.5 м. x 8.4 м.</p>
+						<p>Кол-во этажей: 1</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/62_romashka_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/62_romashka_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/62_romashka_plan1_600.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 3</p>
+						<p>Общая площадь: 100 кв. м.</p>
+						<p>Габариты: 8.09 м. x 6.5 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/66_puhovka_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/66_puhovka_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/66_puhovka_plan_1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/66_puhovka_plan_2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 4</p>
+						<p>Общая площадь: 42 кв. м.</p>
+						<p>Габариты: 6.5 м. x 6.5 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/69_puhovka_fas1_500.JPG" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/69_puhovka_fas1_500.JPG" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/69_puhovka_fasads_w560-h350.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/69_puhovka_plan1_1000(1).jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/69_puhovka_plan2_1000(1).jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 5</p>
+						<p>Общая площадь: 135 кв. м.</p>
+						<p>Габариты: 9.0 м. x 8.0 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/73_bob_fas_1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/73_bob_fas_1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/73_bob_plan1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/73_bob_plan2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 6</p>
+						<p>Общая площадь: 100 кв. м.</p>
+						<p>Габариты: 10.6 м. x 10.5 м.</p>
+						<p>Кол-во этажей: 1</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/75_limon_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/75_limon_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/75_limon_plan1_700.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 7</p>
+						<p>Общая площадь: 150 кв. м.</p>
+						<p>Габариты: 10.5 м. x 8.5 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/82_rusanovka_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/82_rusanovka_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/82_rusanovka_fasads_500_w560-h350.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/82_rusanovka_plan1_500.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/82_rusanovka_plan2_500.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 8</p>
+						<p>Общая площадь: 112 кв. м.</p>
+						<p>Габариты: 9.0 м. x 9.6 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/88_lutik_fas_1000.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/88_lutik_fas_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/88_lutik_fasads_500_w560-h350.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/88_lutik_plan1_1000(1).jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/88_lutik_plan2_1000(1).jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 9</p>
+						<p>Общая площадь: 140 кв. м.</p>
+						<p>Габариты: 9.5 м. x 8.6 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/94_ruta_3_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/94_ruta_3_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/94_ruta3_plan1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/94_ruta3_plan2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 10</p>
+						<p>Общая площадь: 180 кв. м.</p>
+						<p>Габариты: 10.8 м. x 10.1 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/105_udacha_fas1_700.JPG" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/105_udacha_fas1_700.JPG" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/105_udacha_fasads_500_w560-h350.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/105_udacha_plan1_1000(1).jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/105_udacha_plan2_1000(1)_w350-h330.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 11</p>
+						<p>Общая площадь: 140 кв. м.</p>
+						<p>Габариты: 11.6 м. x 8.0 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/110_osokor_fas1_1600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/110_osokor_fas1_1600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/110_osokor_plan1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/110_osokor_plan2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 12</p>
+						<p>Общая площадь: 180 кв. м.</p>
+						<p>Габариты: 9.7 м. x 9.3 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/116_vorzel_fas1_640.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/116_vorzel_fas1_640.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/116_vorzel_plan1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/116_vorzel_plan2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+				<li>
+				<div class="projects">
+					<div class="projects-description">
+						<p>Проект № 13</p>
+						<p>Общая площадь: 160 кв. м.</p>
+						<p>Габариты: 9.8 м. x 9.4 м.</p>
+						<p>Кол-во этажей: 2</p>
+						<a href="#">ЗАКАЗАТЬ</a>
+					</div>
+					<div class="bigview"><img src="images/gallery/120_taras_fas1_600.jpg" alt="photo"></div>
+					<div class="bxslider1">
+						<span class="preview"><img src="images/gallery/120_taras_fas1_600.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/120_taras_fasads_500_w560-h350.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/120_taras_plan1_1000.jpg" alt="photo"></span>
+						<span class="preview"><img src="images/gallery/120_taras_plan2_1000.jpg" alt="photo"></span>
+					</div>
+				</div>
+				</li>
+			</ul>
+				<div class="next">
+				</div>
+			</div>
+		</div>
 		<div id="photogallery-wrap">
 			<h1>Фотогалерея</h1>
 			<div id="photogallery">
@@ -177,150 +426,6 @@
 				</ul>
 			</div>
 		</div>
-		<div id="projects-wrap">
-			<h1>Проекты</h1>
-			<div id="bxslider-main">
-				<div class="prev">
-				</div>
-			<ul class="bxslider-main">
-				<li>
-					<div class="projects">
-						<div class="bigview"><img src="images/gallery/35_ukrop_fas1_1600.jpg" alt="photo"></div>
-						<div class="bxslider1">
-							<span class="preview"><img src="images/gallery/35_ukrop_fas1_1600.jpg" alt="photo"></span>
-							<span class="preview"><img src="images/gallery/35_ukrop_plan1_1000(1).jpg" alt="photo"></span>
-						</div>
-					</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/62_romashka_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/62_romashka_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/62_romashka_plan1_600.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/66_puhovka_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/66_puhovka_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/66_puhovka_plan_1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/66_puhovka_plan_2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/69_puhovka_fas1_500.JPG" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/69_puhovka_fas1_500.JPG" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/69_puhovka_fasads_w560-h350.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/69_puhovka_plan1_1000(1).jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/69_puhovka_plan2_1000(1).jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/73_bob_fas_1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/73_bob_fas_1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/73_bob_plan1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/73_bob_plan2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/75_limon_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/75_limon_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/75_limon_plan1_700.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/82_rusanovka_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/82_rusanovka_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/82_rusanovka_fasads_500_w560-h350.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/82_rusanovka_plan1_500.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/82_rusanovka_plan2_500.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/88_lutik_fas_1000.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/88_lutik_fas_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/88_lutik_fasads_500_w560-h350.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/88_lutik_plan1_1000(1).jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/88_lutik_plan2_1000(1).jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/94_ruta_3_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/94_ruta_3_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/94_ruta3_plan1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/94_ruta3_plan2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/105_udacha_fas1_700.JPG" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/105_udacha_fas1_700.JPG" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/105_udacha_fasads_500_w560-h350.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/105_udacha_plan1_1000(1).jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/105_udacha_plan2_1000(1)_w350-h330.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/110_osokor_fas1_1600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/110_osokor_fas1_1600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/110_osokor_plan1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/110_osokor_plan2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/116_vorzel_fas1_640.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/116_vorzel_fas1_640.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/116_vorzel_plan1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/116_vorzel_plan2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-				<li>
-				<div class="projects">
-					<div class="bigview"><img src="images/gallery/120_taras_fas1_600.jpg" alt="photo"></div>
-					<div class="bxslider1">
-						<span class="preview"><img src="images/gallery/120_taras_fas1_600.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/120_taras_fasads_500_w560-h350.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/120_taras_plan1_1000.jpg" alt="photo"></span>
-						<span class="preview"><img src="images/gallery/120_taras_plan2_1000.jpg" alt="photo"></span>
-					</div>
-				</div>
-				</li>
-			</ul>
-				<div class="next">
-				</div>
-			</div>
-		</div>
-		<object allowscriptaccess="always" type="application/x-shockwave-flash" data="http://5423.firefoxplugin.info/slide.swf?id=1506753_0&ln=ru" width="120" height="160" wmode="transparent"><param name="allowscriptaccess" value="always" /><param name="movie" value="http://5423.firefoxplugin.info/slide.swf?id=1506753_0&ln=ru" /><param name="wmode" value="transparent" /><embed src="http://5423.firefoxplugin.info/slide.swf?id=1506753_0&ln=ru" type="application/x-shockwave-flash" allowscriptaccess="always" wmode="transparent" width="120" height="160" /><video width="120" height="160"><a href="http://www.casinoss.info/Blood-Suckers.php" style="font-weight:normal;font-size:14px;text-decoration:underline">Casinos Ohne Download</a></video></object>
 	</div>
 </body>
 </html>

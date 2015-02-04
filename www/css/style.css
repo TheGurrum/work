@@ -391,7 +391,7 @@ header {
 	margin: 0 auto;
 }
 #photogallery-wrap {
-	background: url("../images/block_bg.png") repeat-y;
+	background: url("../images/block_bg_big.png") no-repeat left top;
 	background-size: cover;
 	height: 820px;
 	margin: 0 auto;
@@ -446,19 +446,48 @@ header {
 	padding-top: 65px;
 	position: relative;
 }
-
 .projects {
 	width: 920px;
 	height: 720px;
 	text-align: center;
 	margin: 0 auto;
-	padding: 10px;
 	overflow: hidden;
-	border-radius: 10px;
 	position: relative;
 }
+.projects-description {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+	background: #f00;
+	padding: 20px;
+	width: 220px;
+	height: 220px;
+	border-radius: 0 0 0 100%;
+	z-index: 200;
+}
+.projects-description p, .projects-description a {
+	font-weight: bolder;
+	display: block;
+	padding-top: 10px;
+	float: right;
+	color: #fff;
+}
+.projects-description a {
+	background: #fff;
+	color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+	border-radius: 100%;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.projects-description a:hover {
+	background: #f00;
+	color: #fff;
+}
+
 .projects .bigview {
-	border-radius: 10px;
 	max-width: 100%;
 	max-height: 100%;
 	margin: 0 auto;
@@ -470,7 +499,6 @@ header {
 	max-width: 920px;
 	min-height:600px;
 	max-height: 600px;
-	border-radius: 10px;
 }
 .projects .bxslider1 {
 	display: block;
@@ -499,7 +527,7 @@ header {
 	display: block;
 	position: relative;
 	margin: 0 auto;
-	max-width: 100%;
+	max-width: 1040px;
 	max-height: 100%;
 }
 #bxslider-main .prev {
@@ -527,5 +555,54 @@ header {
 	text-indent: -9999px;
 	border-radius: 3px 0 0 3px;
 	z-index: 120;
+}
+#form-raschet {
+	position: fixed;
+	display: none;
+	background: url("../images/block_bg_big.png") repeat-y;
+	padding: 50px 0;
+	z-index: 220;
+}
+#form-raschet form {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	background: rgba(20,20,20,0.5);
+	width: 360px;
+	height: 280px;
+	padding: 30px;
+	border-radius: 30px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+#form-raschet form input[type='text'] {
+	color: #000;
+	font-style: bolder;
+	font-size: 100%;
+	height: 30px;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	padding-left: 10px;
+}
+#form-raschet form label {
+	color: #fff;
+	font-style: bold;
+	height: 30px;
+}
+#form-raschet form input[type='checkbox'] {
+	margin: 0px;
+	width: 15px;
+}
+#mansarda {
+	margin-right: 10px;
+	float: left;
+}
+#form-raschet form input[type='button'],#form-raschet form input[type='submit'] {
+	padding: 10px;
+	background: #fff;
+	color: rgba(0,0,0,1);
+}
+#form-raschet form input[type='button']:hover,#form-raschet form input[type='submit']:hover {
+	background: rgba(255,255,255,0.7);
+	color: #fff;
 }
   
