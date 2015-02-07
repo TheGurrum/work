@@ -426,6 +426,21 @@
 				</ul>
 			</div>
 		</div>
+		<div id="form-zakaz">
+		<form name="zak_form" action="#" method="post"> <!-- Здесь в action указать файл обработки .php -->
+		<p>
+		<label>Введите ваши данные:</label><br /><br />
+		<label>Ваше имя:</label><br />
+		<input id="name" type="text" name="name" size="40" maxlength="20" value="" pattern="[a-zA-Zа-яА-Я ]{1,30}" placeholder="ФИО" required/><br />
+		<label>Контактный телефон:</label><br />
+		<input id="tel" type="text" name="tel" size="40" maxlength="20" value="" pattern="[0-9]{1,20}" placeholder="Номер телефона" required/><br />
+		<label>Контактный email:</label><br />
+		<input id="mail" type="text" name="mail" size="40" maxlength="20" value="" pattern="\S+@[a-z]+.[a-z]+" placeholder="Ваша эл.почта" required/><br />
+		<input type="button" name="back" onclick="onBackClick2()" value="Назад" />
+		<input type="submit" name="send" value="Отправить" />
+		</p>
+		</form>
+		</div>
 	</div>
 </body>
 </html>
